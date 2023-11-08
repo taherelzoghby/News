@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
           ),
           bottom: TabBar(
             tabs: tabs,
-            unselectedLabelColor: AppConsts.grey,
+            unselectedLabelColor: AppConsts.white.withOpacity(.5),
             labelColor: AppConsts.white,
             isScrollable: true,
             indicatorColor: AppConsts.white,

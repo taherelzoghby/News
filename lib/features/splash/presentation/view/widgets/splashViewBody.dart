@@ -15,15 +15,11 @@ class SplashViewBody extends StatefulWidget {
 
 class _SplashViewBodyState extends State<SplashViewBody> {
   late Animation<Offset> slidingAnimation;
+
   @override
   void initState() {
     navigateFuture();
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 
   @override
@@ -32,6 +28,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        ///animate logo
         TweenAnimationBuilder<double>(
           tween: Tween(begin: 0, end: size.height * .05.h),
           duration: const Duration(seconds: 3),
@@ -43,9 +40,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           },
         ),
         SizedBox(height: size.height * .05.h),
+
+        ///linear progress indicator
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 40.sp),
-          child: const LinearProgressIndicator(color: AppConsts.red),
+          child: const LinearProgressIndicator(color: AppConsts.mainColor),
         ),
       ],
     );

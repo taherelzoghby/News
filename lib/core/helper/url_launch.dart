@@ -11,7 +11,7 @@ Future<void> customUrlLauncher(BuildContext context,
       await launchUrl(
         Uri.parse(link),
         mode: LaunchMode.inAppWebView,
-        webViewConfiguration: WebViewConfiguration(),
+        webViewConfiguration: const WebViewConfiguration(),
       );
     } else {
       showSnack(context, message: link);

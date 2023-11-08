@@ -13,6 +13,7 @@ class DetailsView extends StatelessWidget {
     required this.article,
   }) : super(key: key);
   final Article article;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,21 +22,27 @@ class DetailsView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            ///published
             Text(
               "published : ${DateFormat(Strings.dateFormat).format(
-                DateTime.parse(
-                  article.publishedAt.toString(),
-                ),
+                DateTime.parse(article.publishedAt.toString()),
               )}",
             ),
+
+            ///article title
             Text(
               article.title.toString(),
               style: AppConsts.style18,
               textAlign: TextAlign.center,
             ),
+
+            ///to link
             TextButton(
               onPressed: () => customUrlLauncher(context, link: article.url),
-              child: const Text(Strings.seeMoreLabel),
+              child: const Text(
+                Strings.seeMoreLabel,
+                style: TextStyle(color: AppConsts.mainColor),
+              ),
             )
           ],
         ),

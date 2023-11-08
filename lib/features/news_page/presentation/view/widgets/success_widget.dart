@@ -20,9 +20,7 @@ class SuccessWidget extends StatelessWidget {
           child: SlideAnimation(
             verticalOffset: 50.0,
             child: FadeInAnimation(
-              child: Item(
-                article: articles[index],
-              ),
+              child: Item(article: articles[index]),
             ),
           ),
         );

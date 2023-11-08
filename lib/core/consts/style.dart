@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 abstract class AppConsts {
-  static const Color mainColor = Color.fromRGBO(16, 11, 32, 1);
+  static const Color mainColor = Colors.red;
   static const Color white = Colors.white;
   static const Color black = Colors.black;
   static const Color grey = Colors.grey;
   static const Color orange = Color.fromRGBO(255, 221, 79, 1);
-  static const Color red = Colors.red;
   static const Color previewColor = Color.fromRGBO(239, 130, 98, 1);
   static List<Color> colorsGradients = [
     white,
@@ -27,5 +26,16 @@ abstract class AppConsts {
     color: black,
     fontWeight: FontWeight.w600,
     fontSize: 18,
+  );
+
+  static BoxDecoration boxDecorationHomePage = BoxDecoration(
+    gradient: LinearGradient(
+      colors: AppConsts.colorsGradients,
+    ),
+  );
+  static BoxDecoration boxDecorationItem = BoxDecoration(
+    gradient: LinearGradient(
+      colors: AppConsts.colorsGradients,
+    ),
   );
 }

@@ -10,16 +10,20 @@ import 'package:news_app_amit/features/news_page/data/home_repo/home_repo.dart';
 
 class HomeRepoImplementation implements RepoHome {
   ApiService apiService;
+
   HomeRepoImplementation({required this.apiService});
+
+  ///fetch articles method
   @override
   Future<Either<Failure, List<Article>>> fetchArticles({
     required String category,
   }) async {
     List<Article> articlesList = [];
     try {
-      var result = await apiService.get(category: category);
+      Map<String, dynamic> result = await apiService.get(category: category);
 
       for (var element in result[Strings.articlesLabel]) {
+        ///add articles to list
         articlesList.add(Article.fromJson(element));
       }
       return Right(articlesList);

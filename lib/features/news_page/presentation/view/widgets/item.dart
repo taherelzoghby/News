@@ -13,6 +13,7 @@ class Item extends StatelessWidget {
     required this.article,
   }) : super(key: key);
   final Article article;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -21,12 +22,9 @@ class Item extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 6.h),
         child: Container(
-          height: size.height * .12,
-          width: size.width,
-          decoration: BoxDecoration(
-            color: AppConsts.white,
-            borderRadius: BorderRadius.circular(10),
-          ),
+          height: size.height * .12.h,
+          width: size.width.w,
+          decoration: AppConsts.boxDecorationItem,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
