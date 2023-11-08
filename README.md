@@ -1,5 +1,9 @@
 # News app
 
+
+https://github.com/taherelzoghby/News/assets/77517566/d1174db2-027f-4b19-8deb-cf94d3af008c
+
+
 The News app allows users to browse through news headlines for different categories such as business,entertainment,general,health,science,sports and technology.
 
 ## Technologies
