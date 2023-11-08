@@ -1,16 +1,17 @@
-# news_app_amit
+# News app
 
-A new Flutter project.
+The News app allows users to browse through news headlines for different categories such as business,entertainment,general,health,science,sports and technology.
 
-## Getting Started
+## Technologies
+Flutter<br>
 
-This project is a starting point for a Flutter application.
+## Key Features
+state management:Getx-MVVM<br>
+remote data:API -Dio
 
-A few resources to get you started if this is your first Flutter project:
+## Features
+The News screen displays news headlines as well as a category bar that showcases various categories of news, such as business,entertainment,general,health,science,sports and technology, and so on. You can select any news category tab to read the news headlines associated with it. By default, the News displays the business category.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Setup
+install all packages by flutter pub get and add images in assets folder in your pc/laptop.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
