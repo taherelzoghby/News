@@ -10,7 +10,8 @@ The News app allows users to browse through news headlines for different categor
 Flutter<br>
 
 ## Key Features
-state management:Getx-MVVM<br>
+state management:Getx<br>
+architecture:MVVM<br>
 remote data:API -Dio
 
 ## Features
