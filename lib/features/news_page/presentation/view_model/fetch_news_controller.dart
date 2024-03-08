@@ -12,7 +12,7 @@ class FetchNewsController extends GetxController{
 
   FetchNewsController({required this.repoHome});
 
-  RxList<Article> articleslist = <Article>[].obs;
+  RxList<Article> articlesList = <Article>[].obs;
 
   ///is loading varibale to check is load or not
   bool isLoading = false;
@@ -26,7 +26,7 @@ class FetchNewsController extends GetxController{
   ///fetch news method
   fetchNews({required int currentIndex}) async {
     ///clear list
-    articleslist.clear();
+    articlesList.clear();
     isLoading = true;
     Either<Failure, List<Article>> result = await repoHome.fetchArticles(
       category: currentIndex == 0
@@ -52,7 +52,7 @@ class FetchNewsController extends GetxController{
       },
       (articles) {
         ///success
-        articleslist.value = articles;
+        articlesList.value = articles;
         isLoading = false;
         isFailure = false;
       },

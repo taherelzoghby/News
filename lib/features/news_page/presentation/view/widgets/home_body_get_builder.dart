@@ -34,7 +34,7 @@ class HomeBodyGetBuilder extends StatelessWidget {
           return FailWidget(errorMessage: cont.message);
         } else {
           ///loaded
-          List<Article> articles = cont.articleslist.value;
+          List<Article> articles = cont.articlesList.value;
           return SuccessWidget(articles: articles);
         }
       },
