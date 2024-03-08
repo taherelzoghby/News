@@ -6,21 +6,33 @@ import '../consts/strings.dart';
 import '../widgets/custom_loading.dart';
 
 class HandleImageWidget extends StatelessWidget {
-  const HandleImageWidget({super.key, required this.image});
+  const HandleImageWidget({
+    super.key,
+    required this.image,
+    this.height,
+  });
 
   final String image;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
     String type = checkPhotoType(image);
     switch (type) {
       case 'jpg' || 'png':
-        return Image.asset(image);
+        return Image.asset(
+          image,
+          height: height,
+        );
       case 'svg':
-        return SvgPicture.asset(image);
+        return SvgPicture.asset(
+          image,
+          height: height,
+        );
       case 'network':
         return CachedNetworkImage(
           imageUrl: image,
+          height: height,
           progressIndicatorBuilder:
               (context, String data, DownloadProgress pr) =>
                   const CustomLoading(),

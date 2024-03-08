@@ -4,7 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:news_app_amit/core/consts/assets.dart';
 import 'package:news_app_amit/core/consts/style.dart';
+import 'package:news_app_amit/core/helper/handle_image_widget.dart';
 import 'package:news_app_amit/features/news_page/presentation/view/home_page.dart';
+
+import 'custom_image_animation.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -24,27 +27,17 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ///animate logo
-        TweenAnimationBuilder<double>(
-          tween: Tween(begin: 0, end: size.height * .05.h),
-          duration: const Duration(seconds: 3),
-          builder: (_, angle, child) {
-            return SvgPicture.asset(
-              AppAssets.logo,
-              height: angle,
-            );
-          },
-        ),
-        SizedBox(height: size.height * .05.h),
+        CustomImageAnimation(),
+        AspectRatio(aspectRatio: AppConsts.aspect16on2),
 
         ///linear progress indicator
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40.sp),
-          child: const LinearProgressIndicator(color: AppConsts.mainColor),
+          padding: AppConsts.paddH40,
+          child: LinearProgressIndicator(color: AppConsts.mainColor),
         ),
       ],
     );
