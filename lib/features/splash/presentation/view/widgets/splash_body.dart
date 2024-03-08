@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:news_app_amit/core/consts/assets.dart';
 import 'package:news_app_amit/core/consts/style.dart';
-import 'package:news_app_amit/core/helper/handle_image_widget.dart';
-import 'package:news_app_amit/features/news_page/presentation/view/home_page.dart';
+import 'package:news_app_amit/features/news_page/presentation/view/home_view.dart';
 
 import 'custom_image_animation.dart';
 
@@ -46,6 +42,6 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   ///navigate to home
   void navigateFuture() => Future.delayed(
         const Duration(seconds: 3),
-        () => Get.off(() => const HomePage()),
+        () => Get.off(() => const HomeView()),
       );
 }

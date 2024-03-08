@@ -7,8 +7,8 @@ import 'package:news_app_amit/core/helper/url_launch.dart';
 
 import 'package:news_app_amit/core/models/article/article.dart';
 
-class DetailsView extends StatelessWidget {
-  const DetailsView({
+class DetailsBody extends StatelessWidget {
+  const DetailsBody({
     Key? key,
     required this.article,
   }) : super(key: key);
@@ -17,7 +17,7 @@ class DetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: AppConsts.allPadding8,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
