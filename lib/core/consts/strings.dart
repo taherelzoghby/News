@@ -11,4 +11,9 @@ abstract class Strings {
   static const String technologyLabel = 'technology';
   static const String seeMoreLabel = 'see more';
   static const String dateFormat = 'yyyy/MM/dd';
+  static const String jpg = 'jpg';
+  static const String png = 'png';
+  static const String svg = 'svg';
+  static const String https = 'https';
+  static const String network = 'network';
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:news_app_amit/features/splash/presentation/view/splashView.dart';
+import 'package:news_app_amit/features/splash/presentation/view/splash_view.dart';
 
 import 'core/consts/strings.dart';
 import 'core/services/service_locator.dart';
