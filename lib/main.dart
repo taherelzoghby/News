@@ -22,10 +22,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           title: Strings.appName,
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            useMaterial3: true,
-          ),
+          theme: ThemeData(useMaterial3: true),
           home: const SplashView(),
         );
       },
